@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node dist/server.js",
     "build": "webpack",
-    "test": "mocha -r ts-node/register src/**/*.Spec.ts"
+    "test": "jasmine-ts \"./spec/**/*.spec.ts\""
   },
   "author": {
     "name": "Kris J Winbush",
@@ -23,7 +23,8 @@
     "webpack",
     "tslint",
     "jasmine",
-    "typescript"
+    "typescript",
+    "supertest"
   ],
   "license": "ISC",
   "devDependencies": {
@@ -31,6 +32,10 @@
     "@types/jasmine": "^2.6.3",
     "@types/node": "^8.0.51",
     "jasmine-core": "^2.8.0",
+    "jasmine-spec-reporter": "^4.2.1",
+    "jasmine-ts": "^0.2.1",
+    "nodemon": "^1.12.1",
+    "supertest": "^3.0.0",
     "ts-loader": "^3.1.1",
     "tslint": "^5.8.0",
     "tslint-loader": "^3.5.3",
@@ -39,6 +44,7 @@
     "webpack-node-externals": "^1.6.0"
   },
   "dependencies": {
+    "@types/supertest": "^2.0.3",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-polyfill": "^6.26.0",
