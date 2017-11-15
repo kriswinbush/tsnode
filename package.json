@@ -4,9 +4,10 @@
   "description": "webpack, typescript, eslint, babel-node project",
   "main": "dist/server.js",
   "scripts": {
+    "pm2": "./node_modules/pm2/bin/pm2",
     "start": "node ./dist/server.js",
     "build": "webpack",
-    "test": "npm run build && ./node_modules/pm2/bin/pm2 start ./dist/server.js && jasmine-ts \"./spec/**/*.spec.ts\" && ./node_modules/pm2/bin/pm2 stop all"
+    "test": "webpack && npm run pm2 start ./dist/server.js && jasmine-ts './spec/**/*.spec.ts' && npm run pm2 stop all"
   },
   "author": {
     "name": "Kris J Winbush",
